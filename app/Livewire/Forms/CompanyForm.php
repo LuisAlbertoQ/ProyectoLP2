@@ -19,8 +19,8 @@ class CompanyForm extends Form{
 
     public function setForm(Company $company){
         $this->company = $company;
-        $this->name = $company->firstname;
-        $this->address = $company->lastname;
+        $this->name = $company->name;
+        $this->address = $company->address;
     }
 
     public function resetForm(){

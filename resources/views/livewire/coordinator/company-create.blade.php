@@ -1,4 +1,4 @@
-<x-modal.card title="Registro nuevo Plann" blur wire:model.defer="isOpen">
+<x-modal.card title="Registro Nueva Empresa" blur wire:model.defer="isOpen">
     <div class="my-2 md:mr-2 md:mb-0 w-full">
         <x-input label="Nombre" icon="user" wire:model="form.name"/>
     </div>

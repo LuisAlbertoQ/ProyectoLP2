@@ -17,9 +17,6 @@
     <div class="my-2 md:mr-2 md:mb-0 w-full">
         <x-textarea label="Descripcion" wire:model="form.description"/>
     </div>
-    {{--<div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-textarea label="Descripccion" icon="archive" wire:model="from.description" placeholder="Ingrese su Descripcion"/>   
-     </div>--}}
     <div class="my-2 md:mr-2 md:mb-0 w-full">
         <x-input label="Empresa" wire:model="form.company_id"/>
     </div>
