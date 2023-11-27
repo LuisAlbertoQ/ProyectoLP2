@@ -1,7 +1,7 @@
 <div class="py-5">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            PlanesPPP
+            Empresas
         </h2>
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -15,7 +15,7 @@
             <div class="mb-1 ml-10">
                 <x-button primary label="Nuevo" icon="plus" wire:click="create()" spinner="create"></x-button>
                 @if($isOpen)
-                    @include('livewire.estudent.Plan-create')
+                    @include('livewire.coordinator.company-create')
                 @endif
             </div>
         </div>
@@ -26,30 +26,20 @@
                 <tr class="text-left text-xs font-bold uppercase">
                   <td scope="col" class="px-6 py-3">ID</td>
                   <td scope="col" class="px-6 py-3">Nombre</td>
-                  <td scope="col" class="px-6 py-3">Apellido</td>
-                  <td scope="col" class="px-6 py-3">DNI</td>
-                  <td scope="col" class="px-6 py-3">Fecha-Inicio</td>
-                  <td scope="col" class="px-6 py-3">Fecha-Fin</td>
-                  <td scope="col" class="px-6 py-3">Descripción</td>
-                  <td scope="col" class="px-6 py-3">Empresa</td>
+                  <td scope="col" class="px-6 py-3">Direccion</td>
                   <td scope="col" class="px-6 py-3 text-center">Opciones</td>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 dark:text-gray-400">
-                @foreach($plans as $item)
+                @foreach($companies as $item)
                 <tr class="text-sm font-medium text-gray-900">
                   <td class="px-6 py-4">
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-500 text-white">
                       {{$item->id}}
                     </span>
                   </td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->firstname}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->lastname}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->dni}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->startdate}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->enddate}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->description}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$item->company_id}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$item->name}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$item->address}}</td>
                   <td class="px-6 py-4 flex gap-1 justify-end">
                     <x-button.circle primary icon="pencil" wire:click="edit({{$item}})"/>
                     <x-button.circle negative icon="x" x-on:confirm="{
@@ -65,11 +55,11 @@
               </tbody>
             </table>
         </div>
-        @if(!$plans->count())
+        @if(!$companies->count())
             No existe ningun registro coincidente
         @endif
         <div class="px-6 py-3">
-            {{$plans->links()}}
+            {{$companies->links()}}
         </div>
         </div>
       </div>

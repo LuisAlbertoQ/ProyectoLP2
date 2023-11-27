@@ -18,6 +18,9 @@
                     <x-nav-link href="{{ route('estudent.plans') }}" :active="request()->routeIs('estuden.plans')">
                         {{ __('Crear Plan') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('coordinator.companies') }}" :active="request()->routeIs('coordinator.companies')">
+                        {{ __('Empresas') }}
+                    </x-nav-link>
                 </div>
             </div>
 

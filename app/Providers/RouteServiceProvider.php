@@ -41,6 +41,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('estudent')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/estudent.php'));
+
+            Route::middleware('web','auth')
+            ->name('coordinator.')
+            ->prefix('coordinator')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/coordinator.php'));
         });
     }
 }
