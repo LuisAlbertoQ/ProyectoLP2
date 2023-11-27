@@ -18,7 +18,15 @@
         <x-textarea label="Descripcion" wire:model="form.description"/>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input label="Empresa" wire:model="form.company_id"/>
+        {{--<x-input label="Empresa" wire:model="form.company_id"/>--}}
+        <x-select
+        label="Empresa"
+        wire:model.defer="model"
+        placeholder="Seleccione una empresa"
+        :async-data="route('api.companies.index')"
+        option-label="name"
+        option-value="id"
+        />
     </div>
 
     </div>

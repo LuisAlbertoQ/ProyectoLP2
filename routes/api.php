@@ -28,7 +28,7 @@ Route::delete('/plans/{plan}',[PlanController::class, 'destroy']);
 Route::get('/plans/{plan}',[PlanController::class,'show']);
 
 //Company
-Route::get('/companies',[CompanyController::class,'index']);
+Route::get('/companies',[CompanyController::class,'index'])->name('api.companies.index');
 Route::post('/companies',[CompanyController::class, 'store']);
 Route::put('/companies/{company}',[CompanyController::class, 'update']);
 Route::delete('/companies/{company}',[CompanyController::class, 'destroy']);
