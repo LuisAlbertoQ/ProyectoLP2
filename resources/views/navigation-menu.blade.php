@@ -15,13 +15,19 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('estudent.plans') }}" :active="request()->routeIs('estuden.plans')">
                         {{ __('Crear Plan') }}
                     </x-nav-link>
+                </div>
+                @can('Crear Empresas')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('coordinator.companies') }}" :active="request()->routeIs('coordinator.companies')">
-                        {{ __('Empresas') }}
+                        {{ __('Crear Empresas') }}
                     </x-nav-link>
                 </div>
+                @endcan
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
