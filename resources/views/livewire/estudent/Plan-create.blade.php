@@ -21,7 +21,7 @@
         {{--<x-input label="Empresa" wire:model="form.company_id"/>--}}
         <x-select
         label="Empresa"
-        wire:model.defer="model"
+        wire:model.defer="form.company_id"
         placeholder="Seleccione una empresa"
         :async-data="route('api.companies.index')"
         option-label="name"
