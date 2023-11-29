@@ -1,12 +1,15 @@
 <x-modal.card title="Registro nuevo Plann" blur wire:model.defer="isOpen">
     <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input label="fecha_solicitud" icon="user" wire:model="form.fecha_solicitud"/>
+        <x-input label="inicio" icon="user" wire:model="form.inicio"/>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input label="estado" icon="location-marker" wire:model="form.estado"/>
+        <x-input label="fin" icon="location-marker" wire:model="form.fin"/>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input label="company_id" icon="location-marker" wire:model="form.company_id"/>
+        <x-input label="descripcion" icon="location-marker" wire:model="form.descripcion"/>
+    </div>
+    <div class="my-2 md:mr-2 md:mb-0 w-full">
+        <x-input label="empresa" icon="location-marker" wire:model="form.company_id"/>
     </div>
 
     </div>

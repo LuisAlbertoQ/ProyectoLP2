@@ -18,4 +18,7 @@ class Company extends Model{
     public function cartas(){
         return $this->hasMany(CartaP::class);
     }
+    public function convocatorys(){
+        return $this->hasMany(Convocatory::class);
+    }
 }

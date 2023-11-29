@@ -17,10 +17,18 @@ class CompanyForm extends Form{
     #[Rule('required|min:2')]
     public $address;
 
+    #[Rule('required|min:2')]
+    public $ruc;
+
+    #[Rule('required|min:2')]
+    public $rubro;
+
     public function setForm(Company $company){
         $this->company = $company;
-        $this->name = $company->firstname;
-        $this->address = $company->lastname;
+        $this->name = $company->name;
+        $this->address = $company->address;
+        $this->ruc = $company->ruc;
+        $this->rubro = $company->rubro;
     }
 
     public function resetForm(){

@@ -27,6 +27,9 @@
                     <x-nav-link href="{{ route('coordinator.carta') }}" :active="request()->routeIs('coordinator.carta')">
                         {{ __('Carta de presentacion') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('admin.convocatories') }}" :active="request()->routeIs('admin.convocatories')">
+                        {{ __('Convocatorias') }}
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -5,6 +5,12 @@
     <div class="my-2 md:mr-2 md:mb-0 w-full">
         <x-input label="Direccion" icon="location-marker" wire:model="form.address"/>
     </div>
+    <div class="my-2 md:mr-2 md:mb-0 w-full">
+        <x-input label="ruc" icon="location-marker" wire:model="form.ruc"/>
+    </div>
+    <div class="my-2 md:mr-2 md:mb-0 w-full">
+        <x-input label="rubro" icon="location-marker" wire:model="form.rubro"/>
+    </div>
     </div>
     <x-slot name="footer">
         <div class="flex justify-end gap-x-2">

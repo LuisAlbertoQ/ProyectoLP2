@@ -12,13 +12,13 @@ class CartaForm extends Form{
 
     public ?CartaP $carta;
 
-    #[Rule('required|min:2')]
+    #[Rule('required|min:3')]
     public $fecha_solicitud;
 
-    #[Rule('required|min:2')]
+    #[Rule('required|min:1')]
     public $estado;
 
-    #[Rule('required|min:2')]
+    #[Rule('required|min:1')]
     public $company_id;
 
     public function setForm(CartaP $carta){
