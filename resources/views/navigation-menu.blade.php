@@ -16,11 +16,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @can('Crear PlanPPP')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('estudent.plans') }}" :active="request()->routeIs('estuden.plans')">
                         {{ __('Crear Plan') }}
                     </x-nav-link>
                 </div>
+                @endcan
                 @can('Crear Empresas')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('coordinator.companies') }}" :active="request()->routeIs('coordinator.companies')">
