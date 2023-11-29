@@ -27,6 +27,8 @@
                   <td scope="col" class="px-6 py-3">ID</td>
                   <td scope="col" class="px-6 py-3">Nombre</td>
                   <td scope="col" class="px-6 py-3">Direccion</td>
+                  <td scope="col" class="px-6 py-3">RUC</td>
+                  <td scope="col" class="px-6 py-3">Rubro</td>
                   <td scope="col" class="px-6 py-3 text-center">Opciones</td>
                 </tr>
               </thead>
@@ -40,6 +42,8 @@
                   </td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->name}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->address}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$item->ruc}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$item->rubro}}</td>
                   <td class="px-6 py-4 flex gap-1 justify-end">
                     <x-button.circle primary icon="pencil" wire:click="edit({{$item}})"/>
                     <x-button.circle negative icon="x" x-on:confirm="{
