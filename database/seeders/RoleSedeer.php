@@ -18,10 +18,13 @@ class RoleSedeer extends Seeder
 
         $role=Role::create(['name'=>'Supervisor']);
         $role->syncPermissions([1,6,7,8,9]);
-        
+
         $role=Role::create(['name'=>'Estudiante']);
         $role->syncPermissions(['Crear PlanPPP', 'Subir Documento', 'Eliminar Documentos']);
 
-        
+        $role=Role::create(['name'=>'Coordinador']);
+        $role->syncPermissions(['Crear PlanPPP', 'Subir Documento', 'Eliminar Documentos']);
+
+
     }
 }

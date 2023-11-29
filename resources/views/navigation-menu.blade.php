@@ -11,22 +11,35 @@
                 </div>
 
                 <!-- Navigation Links -->
+                @can('Ver dashboard')
+
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                </div>
+                @endcan
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('estudent.plans') }}" :active="request()->routeIs('estuden.plans')">
                         {{ __('Crear Plan') }}
                     </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('coordinator.companies') }}" :active="request()->routeIs('coordinator.companies')">
                         {{ __('Empresas') }}
                     </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('admin.users') }}" :active="request()->routeIs('admin.users')">
                         {{ __('Usuarios') }}
                     </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('coordinator.carta') }}" :active="request()->routeIs('coordinator.carta')">
                         {{ __('Carta de presentacion') }}
                     </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('admin.convocatories') }}" :active="request()->routeIs('admin.convocatories')">
                         {{ __('Convocatorias') }}
                     </x-nav-link>

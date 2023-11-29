@@ -21,7 +21,7 @@ class ConvocatoryForm extends Form{
     #[Rule('required|min:2')]
     public $descripcion;
 
-    #[Rule('required|min:2')]
+    #[Rule('required|min:1')]
     public $company_id;
 
     public function setForm(Convocatory $convocatory){
