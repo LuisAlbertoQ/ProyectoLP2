@@ -14,4 +14,8 @@ class Company extends Model{
         return $this->hasMany(Plan::class);
 
     }
+
+    public function cartas(){
+        return $this->hasMany(CartaP::class);
+    }
 }

@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(CompanySeeder::class);
         Plan::factory(10)->create();
+        $this->call(CartaSeeder::class);
 
     }
 }

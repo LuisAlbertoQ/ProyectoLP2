@@ -24,6 +24,9 @@
                     <x-nav-link href="{{ route('admin.users') }}" :active="request()->routeIs('admin.users')">
                         {{ __('Usuarios') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('coordinator.carta') }}" :active="request()->routeIs('coordinator.carta')">
+                        {{ __('Carta de presentacion') }}
+                    </x-nav-link>
                 </div>
             </div>
 
