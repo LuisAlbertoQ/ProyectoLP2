@@ -16,7 +16,6 @@ class PermissionSeeder extends Seeder
         Permission::create([
             'name'=>'Ver dashboard'
         ]);
-
         Permission::create([
             'name'=>'Listar PlanPP'
         ]);
