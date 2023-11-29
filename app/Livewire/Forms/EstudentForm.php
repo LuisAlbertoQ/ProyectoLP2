@@ -25,7 +25,7 @@ class EstudentForm extends Form{
     #[Rule('required|date_format:Y-m-d')]
     public $enddate;
 
-    #[Rule('required|min:20')]
+    #[Rule('required|min:10')]
     public $description;
 
     #[Rule('required|min:1')]
