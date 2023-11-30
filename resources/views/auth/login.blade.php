@@ -40,7 +40,7 @@
                 @endif
 
                 <x-button type='submit' class="ms-4">
-                    {{ __('Log in') }}
+                    {{ __('Log iN') }}
                 </x-button>
             </div>
         </form>

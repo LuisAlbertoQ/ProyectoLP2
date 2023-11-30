@@ -1,4 +1,4 @@
-<!--<div class="py-5">
+<div class="py-5">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             Impresiones
@@ -8,17 +8,17 @@
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl">
         <div class="flex items-center justify-between dark:text-gray-400">
             <Input de busqueda   -->
-        <!--  <div class="mb-2 w-full">
+        <div class="mb-2 w-full">
                 <x-input icon="search" placeholder="Buscar registro" wire:model.live="search"/>
             </div>
             <!--Boton nuevo   -->
-          <!--  <div class="mb-1 ml-10">
+            <div class="mb-1 ml-10">
                 <x-button primary label="Nuevo" icon="plus" wire:click="create()" spinner="create"></x-button>
 
             </div>
         </div>
         <!--Tabla lista de items   -->
-        <!--<div class="shadow overflow-x-auto border-b border-gray-200 sm:rounded-lg">
+        <div class="shadow overflow-x-auto border-b border-gray-200 sm:rounded-lg">
             <table class="w-full divide-y divide-gray-200 table-auto">
               <thead class="bg-indigo-500 text-white">
                 <tr class="text-left text-xs font-bold uppercase">
@@ -86,4 +86,4 @@
         </div>
         </div>
       </div>
-</div>-->
+</div>

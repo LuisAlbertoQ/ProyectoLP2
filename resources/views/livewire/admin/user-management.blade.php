@@ -71,7 +71,7 @@
                             params: {{$user}}
                         }"
                     />
-
+                    <x-button href="{{route('voting-result')}}" icon="printer" target="blank" label="imprimir" teal/>
 
                   </td>
                   @endcan
