@@ -39,8 +39,11 @@
                       {{$user->id}}
                     </span>
                   </td>
+
                   <td class="px-6 py-4 dark:text-gray-400">{{$user->name}}</td>
+
                   <td class="px-6 py-4 dark:text-gray-400">{{$user->email}}</td>
+
                   <td class="px-6 py-4 dark:text-gray-400">
                     @if (!empty($user->getRoleNames()))
                         @foreach ($user->getRoleNames() as $rol)
@@ -52,6 +55,9 @@
                     @endif
                     </td>
                   <td class="px-6 py-4 flex gap-1 justify-end">
+
+
+
                     <x-button.circle primary icon="pencil" wire:click="edit({{$user}})"/>
                     <x-button.circle negative icon="x" x-on:confirm="{
                             title: 'Seguro que deseas eliminar?',
@@ -60,6 +66,7 @@
                             params: {{$user}}
                         }"
                     />
+
                   </td>
                 </tr>
                 @endforeach

@@ -14,47 +14,32 @@ class PermissionSeeder extends Seeder
     public function run(): void{
         //Dashboard
         Permission::create([
-            'name'=>'Ver dashboard'
+            'name'=>'ver dashboard'
+        ]);
+        //admin
+        Permission::create([
+            'name'=>'ver usuarios'
+        ]);
+        Permission::create([
+            'name'=>'ver cartapresentacion'
+        ]);
+        Permission::create([
+            'name'=>'ver empresas'
+        ]);
+        Permission::create([
+            'name'=>'ver convocatorias'
+        ]);
+        Permission::create([
+            'name'=>'ver planes'
         ]);
 
         Permission::create([
-            'name'=>'Listar PlanPP'
+            'name'=>'ver opciones'
         ]);
-        Permission::create([
-            'name'=>'Aceptar PlanPP'
-        ]);
-        Permission::create([
-            'name'=>'Crear Empresas'
-        ]);
-        Permission::create([
-            'name'=>'Eliminar Empresas'
-        ]);
-        
-        //Supervisor
-        Permission::create([
-            'name'=>'Listar Estudiante'
-        ]);
-        Permission::create([
-            'name'=>'Crear Estudiantes'
-        ]);
-        Permission::create([
-            'name'=>'Editar Estudiantes'
-        ]);
-        Permission::create([
-            'name'=>'Eliminar Estudiantes'
-        ]);
-        //Estudiante
-        Permission::create([
-            'name'=>'Crear PlanPPP'
-        ]);
-        Permission::create([
-            'name'=>'Subir Documento'
-        ]);
-        Permission::create([
-            'name'=>'Eliminar Documentos'
+         Permission::create([
+            'name'=>'ver datos'
         ]);
 
-        
-        
+
     }
 }

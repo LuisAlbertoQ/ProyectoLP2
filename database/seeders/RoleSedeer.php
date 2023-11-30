@@ -12,18 +12,19 @@ class RoleSedeer extends Seeder
      * Run the database seeds.
      */
     public function run(): void{
-
+        //luis
         $role=Role::create(['name'=>'Administrador']);
-        $role->permissions()->attach([1,2,3,4,5,6,7,8,9,10,11,12]);
+        $role->permissions()->attach([1,2,3,4,5,6,7,8]);
+        //neil
 
         $role=Role::create(['name'=>'Supervisor']);
-        $role->syncPermissions([1,6,7,8,9]);
-
+        $role->syncPermissions(['ver dashboard','ver usuarios','ver empresas','ver convocatorias']);
+        //enders
         $role=Role::create(['name'=>'Estudiante']);
-        $role->syncPermissions(['Crear PlanPPP', 'Subir Documento', 'Eliminar Documentos']);
-
+        $role->syncPermissions(['ver dashboard','ver empresas','ver convocatorias','ver planes','ver cartapresentacion']);
+        //hiram
         $role=Role::create(['name'=>'Coordinador']);
-        $role->syncPermissions(['Crear PlanPPP', 'Subir Documento', 'Eliminar Documentos']);
+        $role->syncPermissions(['ver dashboard','ver usuarios','ver cartapresentacion','ver empresas','ver convocatorias']);
 
 
     }
