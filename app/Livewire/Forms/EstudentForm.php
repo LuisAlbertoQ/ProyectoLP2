@@ -2,44 +2,44 @@
 
 namespace App\Livewire\Forms;
 
-use App\Models\Plan;
+use App\Models\Company;
+use App\Models\Convocatory;
+use App\Models\Estudent;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
 class EstudentForm extends Form{
-    public ?Plan $plan;
+
+    public ?Estudent $estudent;
 
     #[Rule('required|min:2')]
-    public $firstname;
+    public $codigo;
 
     #[Rule('required|min:2')]
-    public $lastname;
+    public $nombre;
 
-    #[Rule('required|min:8')]
-    public $dni;
-
-    #[Rule('required|date_format:Y-m-d')]
-    public $startdate;
-
-    #[Rule('required|date_format:Y-m-d')]
-    public $enddate;
-
-    #[Rule('required|min:20')]
-    public $description;
+    #[Rule('required|min:2')]
+    public $apellido;
 
     #[Rule('required|min:1')]
-    public $company_id;
+    public $ciclo;
+    #[Rule('required|min:1')]
+    public $email;
+    #[Rule('required|min:1')]
+    public $celular;
+    #[Rule('required|min:1')]
+    public $usuario_id;
 
-    public function setForm(Plan $plan){
-        $this->plan = $plan;
-        $this->firstname = $plan->firstname;
-        $this->lastname = $plan->lastname;
-        $this->dni = $plan->dni; 
-        $this->startdate = $plan->startdate;
-        $this->enddate = $plan->enddate;
-        $this->description = $plan->description;
-        $this->company_id = $plan->company_id;
+    public function setForm(Estudent $estudent){
+        $this->estudent = $estudent;
+        $this->codigo = $estudent->codigo;
+        $this->nombre = $estudent->nombre;
+        $this->apellido = $estudent->apellido;
+        $this->ciclo = $estudent->ciclo;
+        $this->email = $estudent->email;
+        $this->celular = $estudent->celular;
+        $this->usuario_id = $estudent->usuario_id;
     }
 
     public function resetForm(){

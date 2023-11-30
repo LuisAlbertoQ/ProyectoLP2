@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Estudent;
 use App\Models\Plan;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Contracts\Permission;
 
@@ -27,6 +29,7 @@ class DatabaseSeeder extends Seeder
         //Usuario administrador
         $this->call(UserSeeder::class);
         $this->call(CompanySeeder::class);
+        Estudent::factory(10)->create();
         Plan::factory(10)->create();
         $this->call(CartaSeeder::class);
         $this->call(ConvocatorySeeder::class);

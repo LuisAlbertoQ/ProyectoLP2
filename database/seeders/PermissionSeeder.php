@@ -39,6 +39,9 @@ class PermissionSeeder extends Seeder
          Permission::create([
             'name'=>'ver datos'
         ]);
+         Permission::create([
+            'name'=>'ver estudiantes'
+        ]);
 
 
     }
