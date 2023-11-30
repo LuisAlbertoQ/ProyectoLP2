@@ -10,10 +10,10 @@
     </div>
     <div class="flex flex-wrap -mx-2">
         <div class="w-full md:w-1/2 px-2 my-2">
-            <x-input type="date" label="Fecha-Inicio" icon="calendar" wire:model="form.startdate"/>
+            <x-input type="date" label="Fecha-Inicio" wire:model="form.startdate"/>
         </div>
         <div class="w-full md:w-1/2 px-2 my-2">
-            <x-input type="date" label="Fecha-Fin" icon="calendar" wire:model="form.enddate"/>
+            <x-input type="date" label="Fecha-Fin"  wire:model="form.enddate"/>
         </div>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">

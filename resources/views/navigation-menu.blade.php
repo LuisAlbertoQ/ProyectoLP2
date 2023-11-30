@@ -30,6 +30,13 @@
                     </x-nav-link>
                 </div>
                 @endcan
+                @can('Listar PlanPP')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('coordinator.lists') }}" :active="request()->routeIs('coordinator.lists')">
+                        {{ __('Lista de Planes') }}
+                    </x-nav-link>
+                </div>
+                @endcan
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -104,7 +111,7 @@
                                     </button>
                                     <form method="POST" action="{{ route('logout') }}" x-data>
                                         @csrf
-        
+
                                         <x-dropdown-link href="{{ route('logout') }}"
                                                  @click.prevent="$root.submit();">
                                             {{ __('Log Out') }}
