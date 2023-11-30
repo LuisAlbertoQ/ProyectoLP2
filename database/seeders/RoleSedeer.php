@@ -18,13 +18,13 @@ class RoleSedeer extends Seeder
         //neil
 
         $role=Role::create(['name'=>'Supervisor']);
-        $role->syncPermissions(['ver dashboard','ver usuarios','ver empresas','ver convocatorias']);
+        $role->syncPermissions(['ver dashboard','ver usuarios','ver empresas','ver convocatorias',]);
         //enders
         $role=Role::create(['name'=>'Estudiante']);
         $role->syncPermissions(['ver dashboard','ver empresas','ver convocatorias','ver planes','ver cartapresentacion']);
         //hiram
         $role=Role::create(['name'=>'Coordinador']);
-        $role->syncPermissions(['ver dashboard','ver usuarios','ver cartapresentacion','ver empresas','ver convocatorias']);
+        $role->syncPermissions(['ver dashboard','ver usuarios','ver cartapresentacion','ver empresas','ver convocatorias','ver datos']);
 
 
     }

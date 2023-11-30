@@ -47,9 +47,8 @@
 
 
                   <td class="px-6 py-4 flex gap-1 justify-end">
-                    @can('Ver dashboard')
+
                     <x-button.circle primary icon="pencil" wire:click="edit({{$item}})"/>
-                    @endcan
                     <x-button.circle negative icon="x" x-on:confirm="{
                             title: 'Seguro que deseas eliminar?',
                             icon: 'warning',
@@ -57,7 +56,10 @@
                             params: {{$item}}
                         }"
                     />
-                    <x-button.circle positive icon="check" />
+                        @can(['ver datos'])
+
+                        <x-button.circle positive icon="check" />
+                        @endcan
                   </td>
 
                 </tr>

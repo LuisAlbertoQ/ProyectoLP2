@@ -28,7 +28,10 @@
                   <td scope="col" class="px-6 py-3">Nombre</td>
                   <td scope="col" class="px-6 py-3">Email</td>
                   <td scope="col" class="px-6 py-3">Roles</td>
+                  @can('ver opciones')
+
                   <td scope="col" class="px-6 py-3 text-center">Opciones</td>
+                  @endcan
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 dark:text-gray-400">
@@ -54,7 +57,9 @@
                         @endforeach
                     @endif
                     </td>
+                    @can('ver opciones')
                   <td class="px-6 py-4 flex gap-1 justify-end">
+
 
 
 
@@ -67,7 +72,9 @@
                         }"
                     />
 
+
                   </td>
+                  @endcan
                 </tr>
                 @endforeach
               </tbody>

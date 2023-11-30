@@ -29,7 +29,10 @@
                   <td scope="col" class="px-6 py-3">fin</td>
                   <td scope="col" class="px-6 py-3">descripcion</td>
                   <td scope="col" class="px-6 py-3">empresa</td>
+                  @can(['ver datos'])
+
                   <td scope="col" class="px-6 py-3 text-center">Opciones</td>
+                  @endcan
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 dark:text-gray-400">
@@ -44,7 +47,9 @@
                   <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->fin}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->descripcion}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->company_id}}</td>
+                  @can(['ver datos'])
                   <td class="px-6 py-4 flex gap-1 justify-end">
+
                     <x-button.circle primary icon="pencil" wire:click="edit({{$convocatory}})"/>
                     <x-button.circle negative icon="x" x-on:confirm="{
                             title: 'Seguro que deseas eliminar?',
@@ -54,6 +59,8 @@
                         }"
                     />
                   </td>
+
+                  @endcan
                 </tr>
                 @endforeach
               </tbody>
