@@ -8,11 +8,13 @@
     <div class="my-2 md:mr-2 md:mb-0 w-full">
         <x-input label="DNI" icon="identification" wire:model="form.dni"/>
     </div>
-    <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input type="date" label="Fecha-Inicio" icon="calendar" wire:model="form.startdate"/>
-    </div>
-    <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input type="date" label="Fecha-Fin" icon="calendar" wire:model="form.enddate"/>
+    <div class="flex flex-wrap -mx-2">
+        <div class="w-full md:w-1/2 px-2 my-2">
+            <x-input type="date" label="Fecha-Inicio" icon="calendar" wire:model="form.startdate"/>
+        </div>
+        <div class="w-full md:w-1/2 px-2 my-2">
+            <x-input type="date" label="Fecha-Fin" icon="calendar" wire:model="form.enddate"/>
+        </div>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">
         <x-textarea label="Descripcion" wire:model="form.description"/>
@@ -29,7 +31,6 @@
         />
     </div>
 
-    </div>
     <x-slot name="footer">
         <div class="flex justify-end gap-x-2">
             <x-button flat label="Cancel" x-on:click="close()" />
