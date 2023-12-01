@@ -1,6 +1,5 @@
 <?php
 
-use App\Livewire\CrudAnnouncement;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +25,4 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
-    Route::get('/announcement', CrudAnnouncement::class)->name('announcement');
 });

@@ -45,5 +45,5 @@ class PlanController extends Controller{
             return response()->json(['message' => 'Registro no encontrado'], 404);
         }
     }
-    
+
 }

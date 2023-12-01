@@ -1,7 +1,7 @@
 <div class="py-5">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            PlanesPPP
+            Lista de planes
         </h2>
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -10,13 +10,6 @@
             <!--Input de busqueda   -->
             <div class="mb-2 w-full">
                 <x-input icon="search" placeholder="Buscar registro" wire:model.live="search"/>
-            </div>
-            <!--Boton nuevo   -->
-            <div class="mb-1 ml-10">
-                <x-button primary label="Nuevo" icon="plus" wire:click="create()" spinner="create"></x-button>
-                @if($isOpen)
-                    @include('livewire.estudent.Plan-create')
-                @endif
             </div>
         </div>
         <!--Tabla lista de items   -->
@@ -32,7 +25,6 @@
                   <td scope="col" class="px-6 py-3">Fecha-Fin</td>
                   <td scope="col" class="px-6 py-3">Descripción</td>
                   <td scope="col" class="px-6 py-3">Empresa</td>
-                  <td scope="col" class="px-6 py-3 text-center">Opciones</td>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 dark:text-gray-400">
@@ -50,16 +42,6 @@
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->enddate}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->description}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->company_id}}</td>
-                  <td class="px-6 py-4 flex gap-1 justify-end">
-                    <x-button.circle primary icon="pencil" wire:click="edit({{$item}})"/>
-                    <x-button.circle negative icon="x" x-on:confirm="{
-                            title: 'Seguro que deseas eliminar?',
-                            icon: 'warning',
-                            method: 'destroy',
-                            params: {{$item}}
-                        }"
-                    />
-                  </td>
                 </tr>
                 @endforeach
               </tbody>

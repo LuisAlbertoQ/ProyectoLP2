@@ -1,25 +1,23 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Coordinator;
 
-use App\Models\Announcement;
-use App\Models\PlanPPP;
+use App\Livewire\Forms\CompanyForm;
+use App\Models\Company;
 use Livewire\Component;
-use Illuminate\Support\Str;
 use Livewire\WithPagination;
 use WireUi\Traits\Actions;
-use App\Livewire\Forms\AnnouncementForm;
 
-class CrudAnnouncement extends Component
-{
+class CompanyManagement extends Component{
+
     use WithPagination;
     public $isOpen=false;
     public $search;
-    public AnnouncementForm $form;
+    public CompanyForm $form;
     use Actions;
     public function render(){
-        $companies=Announcement::where('name','like','%'.$this->search.'%')->latest('id')->paginate(6);;
-        return view('livewire.coordinator.announcement-management', compact('companies'));
+        $companies=Company::where('name','like','%'.$this->search.'%')->latest('id')->paginate(6);;
+        return view('livewire.coordinator.company-management', compact('companies'));
     }
 
     public function create(){
@@ -31,15 +29,15 @@ class CrudAnnouncement extends Component
     public function store(){
         $this->validate();
 
-        if(!isset($this->form->announcement->id)){
-            Announcement::create($this->form->all());
+        if(!isset($this->form->company->id)){
+            Company::create($this->form->all());
             $this->dialog()->success(
                 $title = 'Mensaje del sistema',
                 $description = 'Registro creado'
             );
         }else{
-            $announcement=Announcement::find($this->form->announcement->id);
-            $announcement->update($this->form->all());
+            $company=Company::find($this->form->company->id);
+            $company->update($this->form->all());
             $this->dialog()->success(
                 $title = 'Mensaje del sistema',
                 $description = 'Registro actualizado'
@@ -48,13 +46,13 @@ class CrudAnnouncement extends Component
         $this->reset(['isOpen']);
     }
 
-    public function edit(Announcement $announcement){
+    public function edit(Company $company){
         //$this->form=$period->toArray();
-        $this->form->setForm($announcement);
+        $this->form->setForm($company);
         $this->isOpen=true;
     }
 
-    public function destroy(Announcement $announcement){
-        $announcement->delete();
+    public function destroy(Company $company){
+        $company->delete();
     }
 }

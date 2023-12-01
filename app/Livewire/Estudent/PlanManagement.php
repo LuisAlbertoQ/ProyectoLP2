@@ -18,7 +18,7 @@ class PlanManagement extends Component{
     use Actions;
     public function render(){
         $plans=Plan::where('firstname','like','%'.$this->search.'%')->latest('id')->paginate(6);;
-        return view('livewire.estudent.plan-management',compact('plans')); 
+        return view('livewire.estudent.plan-management',compact('plans'));
     }
 
     public function create(){

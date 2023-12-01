@@ -15,13 +15,28 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                </div>
+                @can('Crear PlanPPP')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('estudent.plans') }}" :active="request()->routeIs('estuden.plans')">
                         {{ __('Crear Plan') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('announcement') }}" :active="request()->routeIs('announcement')">
-                        {{ __('Convocatoria') }}
+                </div>
+                @endcan
+                @can('Crear Empresas')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('coordinator.companies') }}" :active="request()->routeIs('coordinator.companies')">
+                        {{ __('Crear Empresas') }}
                     </x-nav-link>
                 </div>
+                @endcan
+                @can('Listar PlanPP')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('coordinator.lists') }}" :active="request()->routeIs('coordinator.lists')">
+                        {{ __('Lista de Planes') }}
+                    </x-nav-link>
+                </div>
+                @endcan
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -94,6 +109,14 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                                         </svg>
                                     </button>
+                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                        @csrf
+
+                                        <x-dropdown-link href="{{ route('logout') }}"
+                                                 @click.prevent="$root.submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </form>
                                 </span>
                             @endif
                         </x-slot>
@@ -117,14 +140,7 @@
                             <div class="border-t border-gray-200"></div>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}" x-data>
-                                @csrf
 
-                                <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
-                                    {{ __('Log Out') }}
-                                </x-dropdown-link>
-                            </form>
                         </x-slot>
                     </x-dropdown>
                 </div>

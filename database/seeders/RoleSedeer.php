@@ -14,10 +14,10 @@ class RoleSedeer extends Seeder
     public function run(): void{
 
         $role=Role::create(['name'=>'Administrador']);
-        $role->permissions()->attach([1,2,3,4,5,6,7,8,9]);
+        $role->permissions()->attach([1,2,3,4,5,6,7,8]);
 
-        $role=Role::create(['name'=>'Supervisor']);
-        $role->syncPermissions([1,2,3,4,5]);
+        $role=Role::create(['name'=>'Coordinador']);
+        $role->syncPermissions([2,3,4,5]);
         
         $role=Role::create(['name'=>'Estudiante']);
         $role->syncPermissions(['Crear PlanPPP', 'Subir Documento', 'Eliminar Documentos']);

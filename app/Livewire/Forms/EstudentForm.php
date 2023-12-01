@@ -10,35 +10,36 @@ use Livewire\Form;
 class EstudentForm extends Form{
     public ?Plan $plan;
 
-    #[Rule('required|min:7')]
+    #[Rule('required|min:2')]
     public $firstname;
 
-    #[Rule('required|min:4')]
+    #[Rule('required|min:2')]
     public $lastname;
 
     #[Rule('required|min:8')]
     public $dni;
 
-    #[Rule('required|min:4')]
+    #[Rule('required|date_format:Y-m-d')]
     public $startdate;
 
-    #[Rule('required|min:4')]
+    #[Rule('required|date_format:Y-m-d')]
     public $enddate;
 
-    #[Rule('required|min:4')]
+    #[Rule('required|min:10')]
     public $description;
-    #[Rule('required|min:4')]
+
+    #[Rule('required|min:1')]
     public $company_id;
 
     public function setForm(Plan $plan){
         $this->plan = $plan;
-        $this->firstname = $plan->name;
-        $this->lastname = $plan->year;
-        $this->dni = $plan->year;
-        $this->startdate = $plan->year;
-        $this->enddate = $plan->year;
-        $this->description = $plan->year;
-        $this->company_id = $plan->year;
+        $this->firstname = $plan->firstname;
+        $this->lastname = $plan->lastname;
+        $this->dni = $plan->dni; 
+        $this->startdate = $plan->startdate;
+        $this->enddate = $plan->enddate;
+        $this->description = $plan->description;
+        $this->company_id = $plan->company_id;
     }
 
     public function resetForm(){
