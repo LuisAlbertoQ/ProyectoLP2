@@ -1,11 +1,11 @@
-<div class="py-5">
+<div class="py-5" style="background-image: url('https://medac.es/sites/default/files/blog/destacadas/tipos%20de%20empresa.jpg')">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             Empresas
         </h2>
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl">
+        <div class="bg-transparent overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl rounded-40" style="border: 2px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(20px);">
         <div class="flex items-center justify-between dark:text-gray-400">
             <!--Input de busqueda   -->
             <div class="mb-2 w-full">

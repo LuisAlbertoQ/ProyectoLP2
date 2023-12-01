@@ -1,11 +1,11 @@
-<div class="py-5">
+<div class="py-5" style="background-image: url('https://img.freepik.com/fotos-premium/escritura-manual-sobre-lista-planes-2023-cocepto-lista-tareas-pendientes_121826-2253.jpg?w=2000')">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             Lista de planes
         </h2>
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl">
+        <div class="bg-transparent overflow-hidden shadow-xl sm:rounded-lg px-4 py-4 dark:bg-gray-800/50 dark:bg-gradient-to-bl rounded-40" style="border: 2px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(15px);">
         <div class="flex items-center justify-between dark:text-gray-400">
             <!--Input de busqueda   -->
             <div class="mb-2 w-full">
@@ -25,6 +25,7 @@
                   <td scope="col" class="px-6 py-3">Fecha-Fin</td>
                   <td scope="col" class="px-6 py-3">Descripción</td>
                   <td scope="col" class="px-6 py-3">Empresa</td>
+                  <td scope="col" class="px-6 py-3">Fecha-Creacion</td>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 dark:text-gray-400">
@@ -42,6 +43,7 @@
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->enddate}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->description}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$item->company_id}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$item->created_at}}</td>
                 </tr>
                 @endforeach
               </tbody>
