@@ -3,9 +3,8 @@
     <!-- Primary Navigation Menu -->
     <div class="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16 bg-gray-100">
             <x-navbar/>
-
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <!-- Teams Dropdown -->
@@ -70,7 +69,7 @@
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
+                                    <button type="button" class="mx-3 inline-flex items-center px-3 py-2 border border-black text-sm leading-4 font-medium rounded-md text-black-500 bg-yellow-500 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -80,7 +79,7 @@
                                     <form method="POST" action="{{ route('logout') }}" x-data>
                                         @csrf
 
-                                        <x-dropdown-link href="{{ route('logout') }}"
+                                        <x-dropdown-link href="{{ route('logout') }}" class="inline-flex items-center px-3 py-2 border border-black text-sm leading-4 font-medium rounded-md text-black-500 bg-yellow-500 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150"
                                                  @click.prevent="$root.submit();">
                                             {{ __('Log Out') }}
                                         </x-dropdown-link>
