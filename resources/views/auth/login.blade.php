@@ -14,17 +14,17 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <h1 class="fs-10 text-center">Login</h1>
+            <h1 class="fs-1 text-center">Login</h1>
             <div>
                 <h2 class="text-white">Email</h2>
                 <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="w-full border-none outline-none bg-transparent rounded-40 fs-6 " style="border: 2px solid rgba(255, 255, 255, 0.2);" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-input id="email" class="w-full border-none outline-none bg-transparent rounded-40 fs-6 text-black" style="border: 5px solid rgba(255, 255, 255, 0.2);" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             </div>
 
             <div class="mt-4">
-                <h2 class="text-white">Password</h2>
+                <h2 class="text-muted">Password</h2>
                 <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="w-full border-none outline-none bg-transparent rounded-40 fs-6" style="border: 2px solid rgba(255, 255, 255, 0.2);" type="password" name="password" required autocomplete="current-password" />
+                <x-input id="password" class="w-full border-none outline-none bg-transparent rounded-40 fs-6 text-black" style="border: 5px solid rgba(255, 255, 255, 0.2);" type="password" name="password" required autocomplete="current-password" />
             <div class="block mt-4 ">
                 <label for="remember_me" class="flex items-center">
                     <x-checkbox id="remember_me" name="remember" />
