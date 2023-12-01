@@ -15,10 +15,14 @@ class ResultMain extends Component
     public CompanyForm $form;
     public function render()
     {
+        $companies=Company::all();
+        $pdf= FacadePdf::loadView('reports.voting-result',compact('companies'));
 
+
+        return $pdf->stream();
     }
     public function generateReport(){
-        $companies=Company::take(1);
+        $companies=Company::all();
         $pdf= FacadePdf::loadView('reports.voting-result',compact('companies'));
 
 
