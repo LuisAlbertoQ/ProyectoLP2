@@ -17,3 +17,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+database/migrations/2023_11_29_222210_create_notifications_table.php
