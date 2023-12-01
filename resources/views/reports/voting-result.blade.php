@@ -23,13 +23,7 @@
 
     <table class="table table-bordered table-striped">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>nombre</th>
-                <th>email</th>
-                <th>roles</th>
 
-            </tr>
             <tr>
                 <th>ID</th>
                 <th>nombre</th>
