@@ -37,6 +37,13 @@
                     </x-nav-link>
                 </div>
                 @endcan
+                @can('Listar Convocatoria')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('coorinator.announcement') }}" :active="request()->routeIs('coorinator.announcement')">
+                        {{ __('Convocatoria') }}
+                    </x-nav-link>
+                </div>
+                @endcan
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
