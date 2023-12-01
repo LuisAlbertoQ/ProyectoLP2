@@ -39,6 +39,8 @@
                   <td class="px-6 py-4 dark:text-gray-400">{{$carta->estado}}</td>
                   <td class="px-6 py-4 dark:text-gray-400">{{$carta->company_id}}</td>
                   <td class="px-6 py-4 flex gap-1 justify-end">
+                    @can(['ver datos','ver opciones'])
+
                     <x-button.circle primary icon="pencil" wire:click="edit({{$carta}})"/>
                     <x-button.circle negative icon="x" x-on:confirm="{
                             title: 'Seguro que deseas eliminar?',
@@ -47,6 +49,14 @@
                             params: {{$carta}}
                         }"
                     />
+                    <x-button.circle positive icon="check" />
+                    <x-button href="{{route('voting-result')}}" icon="printer" target="blank" label="imprimir" teal/>
+
+                    @endcan
+                    @can('solicitar')
+                    <x-button secondary label="Solicitar" />
+
+                    @endcan
                   </td>
                 </tr>
                 @endforeach

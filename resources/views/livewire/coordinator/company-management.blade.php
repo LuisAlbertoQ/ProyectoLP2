@@ -52,11 +52,7 @@
                             params: {{$item}}
                         }"
                     />
-                    @can(['ver datos'])
 
-                    <x-button.circle positive icon="check" />
-                    @endcan
-                    <x-button href="{{route('voting-result')}}" icon="printer" target="blank" label="imprimir" teal/>
                   </td>
 
                 </tr>

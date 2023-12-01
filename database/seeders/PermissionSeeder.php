@@ -32,6 +32,16 @@ class PermissionSeeder extends Seeder
         Permission::create([
             'name'=>'ver planes'
         ]);
+        Permission::create([
+            'name'=>'ver estudiantes'
+        ]);
+        Permission::create([
+            'name'=>'ver inducciones'
+        ]);
+        Permission::create([
+            'name'=>'solicitar'
+        ]);
+
 
         Permission::create([
             'name'=>'ver opciones'

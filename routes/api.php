@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::apiResource('cartas', CartaRestController::class);
+Route::apiResource('cartas', CartaController::class);
 //Plan
 Route::get('/plans',[PlanController::class,'index']);
 Route::post('/plans',[PlanController::class, 'store']);
