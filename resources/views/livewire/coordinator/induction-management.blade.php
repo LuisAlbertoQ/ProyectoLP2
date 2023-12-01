@@ -11,7 +11,7 @@
             <div class="mb-1 ml-10">
                 <x-button primary label="Nuevo" icon="plus" wire:click="create()" spinner="create"></x-button>
                 @if($isOpen)
-                    @include('livewire.coordinator.convocatory-create')
+                    @include('livewire.coordinator.induction-create')
                 @endif
             </div>
         </div>
@@ -21,10 +21,10 @@
               <thead class="bg-indigo-500 text-white">
                 <tr class="text-left text-xs font-bold uppercase">
                   <td scope="col" class="px-6 py-3">ID</td>
-                  <td scope="col" class="px-6 py-3">inicio</td>
-                  <td scope="col" class="px-6 py-3">fin</td>
-                  <td scope="col" class="px-6 py-3">descripcion</td>
-                  <td scope="col" class="px-6 py-3">empresa</td>
+                  <td scope="col" class="px-6 py-3">asuntos</td>
+                  <td scope="col" class="px-6 py-3">archivos</td>
+                  <td scope="col" class="px-6 py-3">asistencias</td>
+
                   @can(['ver datos'])
 
                   <td scope="col" class="px-6 py-3 text-center">Opciones</td>
@@ -32,27 +32,26 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 dark:text-gray-400">
-                @foreach($convocatories as $convocatory)
+                @foreach($inductions as $induction)
                 <tr class="text-sm font-medium text-gray-900">
                   <td class="px-6 py-4">
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-500 text-white">
-                      {{$convocatory->id}}
+                      {{$induction->id}}
                     </span>
                   </td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->inicio}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->fin}}</td>
-                  <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->descripcion}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$induction->asunto}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$induction->archivo}}</td>
+                  <td class="px-6 py-4 dark:text-gray-400">{{$induction->asistencias}}</td>
 
-                  <td class="px-6 py-4 dark:text-gray-400">{{$convocatory->company_id}}</td>
                   @can(['ver datos'])
                   <td class="px-6 py-4 flex gap-1 justify-end">
 
-                    <x-button.circle primary icon="pencil" wire:click="edit({{$convocatory}})"/>
+                    <x-button.circle primary icon="pencil" wire:click="edit({{$induction}})"/>
                     <x-button.circle negative icon="x" x-on:confirm="{
                             title: 'Seguro que deseas eliminar?',
                             icon: 'warning',
                             method: 'destroy',
-                            params: {{$convocatory}}
+                            params: {{$induction}}
                         }"
                     />
                   </td>
@@ -63,11 +62,11 @@
               </tbody>
             </table>
         </div>
-        @if(!$convocatories->count())
+        @if(!$inductions->count())
             No existe ningun registro coincidente
         @endif
         <div class="px-6 py-3">
-            {{$convocatories->links()}}
+            {{$inductions->links()}}
         </div>
         </div>
       </div>

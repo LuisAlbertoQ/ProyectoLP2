@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#chartdiv {
+    width: 100%;
+    height: 500px;
+  }
 [x-cloak] {
     display: none;
 }

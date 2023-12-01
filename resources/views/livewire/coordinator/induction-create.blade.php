@@ -1,21 +1,14 @@
 <x-modal.card title="Registro nuevo Plann" blur wire:model.defer="isOpen">
     <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input type="date"    label="fecha_solicitud" icon="user" wire:model="form.fecha_solicitud"/>
+        <x-input label="asuntos" icon="user" wire:model="form.asunto"/>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">
-        <x-input label="estado" icon="location-marker" wire:model="form.estado"/>
+        <x-input label="archivos" icon="location-marker" wire:model="form.archivo"/>
     </div>
     <div class="my-2 md:mr-2 md:mb-0 w-full">
+        <x-input label="asistencias" icon="location-marker" wire:model="form.asistencias"/>
+    </div>
 
-        <x-select
-                 label="Search a User"
-                 wire:model.defer="form.company_id"
-                  placeholder="Select some user"
-                    :async-data="route('api.company.index')"
-                 option-label="name"
-                 option-value="id"
-/>
-    </div>
 
     </div>
     <x-slot name="footer">

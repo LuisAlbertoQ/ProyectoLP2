@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Admin\ResultMain;
+use App\Livewire\DashboardMain;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard',DashboardMain::class)->name('dashboard');
     Route::get('/voting-result',[ResultMain::class,'generateReport'])->name('voting-result');
 });

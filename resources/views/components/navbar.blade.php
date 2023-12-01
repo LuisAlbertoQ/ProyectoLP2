@@ -76,6 +76,15 @@
             </div>
             @endcan
           </li>
+          <li>
+            @can(['ver dashboard'])
+
+            <div class="hidden space-x-8 sm:-my-px sm:ms-20 sm:flex py-10">
+                <x-button outline label="Inducciones" href="{{ route('coordinator.inducciones') }}" :active="request()->routeIs('coordinator.inducciones')"/>
+
+            </div>
+            @endcan
+          </li>
 
        </ul>
     </div>
