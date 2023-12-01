@@ -15,12 +15,10 @@ class ResultMain extends Component
     public CompanyForm $form;
     public function render()
     {
-        $companies=Company::all();
-        return view('livewire.admin.result-main',compact('companies'));
 
     }
     public function generateReport(){
-        $companies=Company::all();
+        $companies=Company::take(1);
         $pdf= FacadePdf::loadView('reports.voting-result',compact('companies'));
 
 
