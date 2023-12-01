@@ -36,8 +36,13 @@ class AnnouncementController extends Controller
         ],200);
     }
 
-    public function show(Announcement $announcement){
-        return response()->json($announcement);
+    public function show($announcements) {
+        $announcements = Announcement::find($announcements);
+        if ($announcements) {
+            return response()->json($announcements);
+        } else {
+            return response()->json(['message' => 'Registro no encontrado'], 404);
+        }
     }
 }
 
