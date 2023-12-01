@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\PlanController;
+use App\Http\Controllers\AnnouncementController;
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,9 @@ Route::post('/plans',[PlanController::class, 'store']);
 Route::put('/plans/{plan}',[PlanController::class, 'update']);
 Route::delete('/plans/{plan}',[PlanController::class, 'destroy']);
 Route::get('/plans/{plan}',[PlanController::class,'show']);
+
+Route::get('/announcements',[AnnouncementController::class,'index']);
+Route::post('/announcements',[AnnouncementController::class, 'store']);
+Route::put('/announcements/{announcement}',[AnnouncementController::class, 'update']);
+Route::delete('/announcements/{announcement}',[AnnouncementController::class, 'destroy']);
+Route::get('/announcements/{announcement}',[AnnouncementController::class,'show']);
